@@ -1,11 +1,11 @@
 import AsSeenInSection from "@/components/AsSeenInSection";
 import CompetitionSection from "@/components/CompetitionSection";
 import HowToPlaySection from "@/components/HowToPlaySection";
+import LatestCompetitions from "@/components/LatestCompetitions";
 import RecentlyWonWatches from "@/components/RecentlyWonWatches";
 import TrustpilotBanner from "@/components/TrustpilotBanner";
 import WatchShowcase from "@/components/WatchShowcase";
 import Winners from "@/components/Winners";
-import Image from "next/image";
 
 export default function Home() {
   return (
@@ -17,6 +17,7 @@ export default function Home() {
       <RecentlyWonWatches />
       <AsSeenInSection />
       <WatchShowcase />
+      <LatestCompetitions />
     </div>
   );
 }

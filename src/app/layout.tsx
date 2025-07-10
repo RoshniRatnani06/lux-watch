@@ -1,16 +1,19 @@
 import type { Metadata } from "next";
+import { Ibarra_Real_Nova } from "next/font/google";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import HeaderWrapper from "@/components/HeaderWrapper";
 import { Footer } from "@/components/Footer";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const ibarraRealNova = Ibarra_Real_Nova({
   subsets: ["latin"],
+  weight: ["400", "500", "600", "700"], // Include weights you need
+  variable: "--font-sans", // Tailwind variable for global sans
+  display: "swap",
 });
 
 const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+  variable: "--font-mono",
   subsets: ["latin"],
 });
 
@@ -27,7 +30,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${ibarraRealNova.variable} ${geistMono.variable} antialiased`}
       >
         <HeaderWrapper />
         {children}

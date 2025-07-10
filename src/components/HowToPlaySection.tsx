@@ -6,7 +6,11 @@ interface StepData {
   description: string;
 }
 
-const HowToPlaySection: React.FC = () => {
+interface HowToPlayInterface{
+  showHeader?: boolean;
+}
+
+const HowToPlaySection: React.FC<HowToPlayInterface> = ({showHeader = true}) => {
   const steps: StepData[] = [
     {
       icon: "/chooseticket.png",
@@ -38,17 +42,21 @@ const HowToPlaySection: React.FC = () => {
     <section className="w-full flex flex-col items-center py-5 bg-white">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
         {/* Header */}
-        <div className="flex flex-col items-center gap-2 mb-12">
-          <h2 className="text-[#212121] text-center font-normal text-xl font-['Ibarra_Real_Nova']">
-            How to play
-          </h2>
-          <h1 className="text-[#212121] text-center font-bold font-['Ibarra_Real_Nova'] text-4xl leading-[41px]">
-            Win the watch of your dreams
-          </h1>
-        </div>
+        {
+          showHeader && (
+            <div className="flex flex-col items-center gap-2 mb-12">
+              <h2 className="text-[#212121] text-center font-normal text-xl font-['Ibarra_Real_Nova']">
+                How to play
+              </h2>
+              <h1 className="text-[#212121] text-center font-bold font-['Ibarra_Real_Nova'] text-4xl leading-[41px]">
+                Win the watch of your dreams
+              </h1>
+            </div>
+          )
+        }
 
         {/* Steps Container */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
+        <div className="grid pt-4 grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
           {steps.map((step, index) => (
             <div
               key={index}

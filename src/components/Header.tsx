@@ -126,12 +126,12 @@ export default function Header({
               </Link>
             </li>
             <li className="nav-li">
-              <Link href="/" className="text-gray-700 hover:text-gray-900">
+              <Link href="/winners" className="text-gray-700 hover:text-gray-900">
                 WINNERS
               </Link>
             </li>
             <li className="nav-li">
-              <Link href="/" className="text-gray-700 hover:text-gray-900">
+              <Link href="/how-to-enter" className="text-gray-700 hover:text-gray-900">
                 HOW TO ENTER
               </Link>
             </li>
@@ -257,7 +257,7 @@ export default function Header({
             </li>
             <li className="nav-li">
               <Link
-                href="/"
+                href="/winners"
                 className="text-gray-700 hover:text-gray-900"
                 onClick={toggleMenu}
               >
@@ -266,7 +266,7 @@ export default function Header({
             </li>
             <li className="nav-li">
               <Link
-                href="/"
+                href="/how-to-enter"
                 className="text-gray-700 hover:text-gray-900"
                 onClick={toggleMenu}
               >
